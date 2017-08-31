@@ -1,5 +1,5 @@
 node('docker-cloud') {
-  docker.withServer('tcp://127.0.0.1:2376', 'my-docker-creds'){
+  docker.withServer('tcp://54.242.67.234:2375'){
      sh "docker ps"  
   }
 }
