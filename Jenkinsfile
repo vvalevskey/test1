@@ -6,6 +6,8 @@ import groovy.transform.InheritConstructors
 class DeployTimeoutException extends Exception {
 }
 
+manager.buildSuccess()
+
 try {
   steps.timestamps {
     stage('docker-cloud') {
@@ -16,4 +18,7 @@ try {
       }
     }
   }
+} catch (err) {
+    echo err.message.toString()
+    manager.buildFailure()
 }
