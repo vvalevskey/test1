@@ -1,10 +1,4 @@
 #!groovy
-@Library(['github.com/docker/jenkins-pipeline-scripts'])
-import groovy.transform.InheritConstructors
-
-@InheritConstructors
-class DeployTimeoutException extends Exception {
-}
 
 try {
   steps.timestamps {
