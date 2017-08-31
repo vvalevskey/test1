@@ -5,7 +5,7 @@ try {
     stage('docker-cloud') {
       node {
         docker.withServer('tcp://54.242.67.234:2375'){
-            sh "docker ps"
+            sh "docker -H tcp://54.242.67.234:2375 ps"
         }
       }
     }
